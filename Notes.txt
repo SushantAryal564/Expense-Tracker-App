@@ -1,0 +1,31 @@
+1. An Overview of the core flutter widgets
+   App/ pagesetup
+    - MaterialApp/ CupertinoApp
+    - Scaffold/ CupertinoPageScaffold
+   layout widgets
+    - Container
+    - Row
+    - Column
+   Row and Column Children Widget
+    - Flexible
+    - Expanded
+   Content Container
+    - Stack
+    - card: Prestyled container widgets with default styles
+   Repeat Element
+    - ListView: Column with scrollable functionality
+    - GridView: combination of row and column and scrollable.
+    - ListTile: widget with default styling and default positioning or layout setup.
+   Content Type
+    - Text
+    - Image
+    - Icon
+   User Input
+    - TextField
+    - RaisedButton/ Floatbutton
+    - GestureDetector
+    - InkWell
+  
+2. Combining widget
+   Text widget take as much space as its content need. so we can set size of such widget with placing those widget inside the widget whose size can be set. 
+   column and row are core widget in flutter in vertical and horizontal direction. main axis is from top to button, and cross axis is from left to right in column and vice versa for row. 
