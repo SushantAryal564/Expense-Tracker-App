@@ -29,3 +29,10 @@
 2. Combining widget
    Text widget take as much space as its content need. so we can set size of such widget with placing those widget inside the widget whose size can be set. 
    column and row are core widget in flutter in vertical and horizontal direction. main axis is from top to button, and cross axis is from left to right in column and vice versa for row. 
+3. Contianer vs Column/ Row
+  Container: Take exactly one child widget, Rich alignment & styling options like border, padding, margining and many more options like decoreation, flexible width, perfect for custom styling & alignment.
+  column/Row: Takes mulitple (unlimited) child widgets, Alignment but not stylish options, always takes full available height and width, Must use if widgets sit next to above each other.
+  We can combine then with each other.
+
+4. Using the string interpolation
+   
