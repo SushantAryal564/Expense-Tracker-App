@@ -41,3 +41,8 @@
 6. Making a list scrollable
    A column take a full available height, a row a full available width. Column tries to squeeze all children it has into itself.If the child has a height which a column cannot srink child widget will not fit into the column anymore. so we need scrolling to a column. 
    SingleChildScrollView allow us to add scroll functionality but it has to be in body element.
+7. Working with ListViews
+   ListView is the colum with the scrollview which has a infinite height. ListView doesn't have a fixed height as it is scrollable.
+   Two way of using it: ListView(childrend:[]) ListView.builder();
+   Listview is like a column with SingleChildScrollView around it. All the widgets that are children are render even it they are offscreen. 
+   builder we don't have wrapping single child scroll view but we have some optimization put in place by flutter. It render the widgets that are visible only. Part that aren't on the screen aren't loaded or rendered. 
