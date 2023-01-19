@@ -38,3 +38,6 @@
    
 5. Splitting the App into widgets
    lifting state up: It means that the common denominator 
+6. Making a list scrollable
+   A column take a full available height, a row a full available width. Column tries to squeeze all children it has into itself.If the child has a height which a column cannot srink child widget will not fit into the column anymore. so we need scrolling to a column. 
+   SingleChildScrollView allow us to add scroll functionality but it has to be in body element.
