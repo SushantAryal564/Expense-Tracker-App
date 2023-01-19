@@ -36,3 +36,5 @@
 
 4. Using the string interpolation
    
+5. Splitting the App into widgets
+   lifting state up: It means that the common denominator 
