@@ -46,10 +46,11 @@ texteditingcontroller is a class provided by flutter and we can assign such cont
 6. Making a list scrollable
    A column take a full available height, a row a full available width. Column tries to squeeze all children it has into itself.If the child has a height which a column cannot srink child widget will not fit into the column anymore. so we need scrolling to a column. 
    SingleChildScrollView allow us to add scroll functionality but it has to be in body element.
+   Flutter tried to always scroll the input, which we are editing into view and therefore it insects the page by the height of that text field, so that rext input can never be below that soft keyboard. so height of the text field is always added as a padding above the soft keyboard. 
 7. Working with ListViews
    ListView is the colum with the scrollview which has a infinite height. ListView doesn't have a fixed height as it is scrollable.
    Two way of using it: ListView(childrend:[]) ListView.builder();
-   - Listview is like a column with SingleChildScrollView around it. All the widgets that are children are render even it they are offscreen. 
+   - Listview is like a column with SingleChildScrollView around it. All the widgets that are children are render even it they are offscreen. With this method all the widgets that are part of the listview are rendered even if they are off screen which means that it consume a lot of memory, a lot of performance for items that aren't even visible. 
    -builder we don't have wrapping single child scroll view but we have some optimization put in place by flutter. It render the widgets that are visible only. Part that aren't on the screen aren't loaded or rendered. 
 
 8. Flutter input and output styling and configuration
