@@ -1,17 +1,18 @@
 1. An Overview of the core flutter widgets
    App/ pagesetup
-    - MaterialApp/ CupertinoApp
-    - Scaffold/ CupertinoPageScaffold
+    - MaterialApp/ CupertinoApp for IOS style app.:   
+    - Scaffold/ CupertinoPageScaffold: Widget gives background app bar. 
    layout widgets
-    - Container
-    - Row
-    - Column
+    - Container: often used as a wrapper
+    - Row: Items horizontally
+    - Column: Items vertically
    Row and Column Children Widget
+   widget to wraper around to specify how much space this child widget should consume in the wrapping row or column
     - Flexible
     - Expanded
    Content Container
-    - Stack
-    - card: Prestyled container widgets with default styles
+    - Stack: If we want items to position on top of each other.
+    - card: Prestyled container widgets with default styles.
    Repeat Element
     - ListView: Column with scrollable functionality
     - GridView: combination of row and column and scrollable.
@@ -35,8 +36,12 @@
   We can combine then with each other.
 
 4. Using the string interpolation
-   
+
+Fetching user Input:
+texteditingcontroller is a class provided by flutter and we can assign such controller to the text field, with the help of controller argument. Such that flutter automatically connects to controllers with our text field and these controller listen to the user input.
+
 5. Splitting the App into widgets
+   As soon as we have stateful widget we should split our app so that we don't rebuild entire widget tree 
    lifting state up: It means that the common denominator 
 6. Making a list scrollable
    A column take a full available height, a row a full available width. Column tries to squeeze all children it has into itself.If the child has a height which a column cannot srink child widget will not fit into the column anymore. so we need scrolling to a column. 
@@ -44,5 +49,9 @@
 7. Working with ListViews
    ListView is the colum with the scrollview which has a infinite height. ListView doesn't have a fixed height as it is scrollable.
    Two way of using it: ListView(childrend:[]) ListView.builder();
-   Listview is like a column with SingleChildScrollView around it. All the widgets that are children are render even it they are offscreen. 
-   builder we don't have wrapping single child scroll view but we have some optimization put in place by flutter. It render the widgets that are visible only. Part that aren't on the screen aren't loaded or rendered. 
+   - Listview is like a column with SingleChildScrollView around it. All the widgets that are children are render even it they are offscreen. 
+   -builder we don't have wrapping single child scroll view but we have some optimization put in place by flutter. It render the widgets that are visible only. Part that aren't on the screen aren't loaded or rendered. 
+
+8. Flutter input and output styling and configuration
+9. Adding AppBar Buttons & Floating Action Buttons
+   
