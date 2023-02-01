@@ -55,4 +55,6 @@ texteditingcontroller is a class provided by flutter and we can assign such cont
 
 8. Flutter input and output styling and configuration
 9. Adding AppBar Buttons & Floating Action Buttons
+25. Showing a modal bottom sheet
+    To show a sheet there is a built in function flutter offeres to us function showMOdalBottomSheet it require argument context and builder a function that needs to return a widget that should be inside of that modal sheet. 
    
