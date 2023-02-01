@@ -57,4 +57,13 @@ texteditingcontroller is a class provided by flutter and we can assign such cont
 9. Adding AppBar Buttons & Floating Action Buttons
 25. Showing a modal bottom sheet
     To show a sheet there is a built in function flutter offeres to us function showMOdalBottomSheet it require argument context and builder a function that needs to return a widget that should be inside of that modal sheet. 
-   
+27. Improving & styling the modal bottom sheet
+    Flutter reevaluate the widgets time to time if a parent widget changes. For stateless widget when a widget is re evaluated any internally stored data is reset is lost. That's why we lose our data in a state less widget, because whenever it is reevaluated by flutter, we lose to state.
+    With widget.functionName we can access function property.
+    Navigator.of(context).pop();
+    pop() method is used to close the top most screen.
+    of(context) is required to get access to the right navigator and context is a special property which is available class wide in our state class.
+28. configuring & using Theme
+    We could use golbally defined color, primary color and secondary color by theming. 
+    set theme in main.dart file. 
+    
