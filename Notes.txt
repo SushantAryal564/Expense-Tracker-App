@@ -67,3 +67,9 @@ texteditingcontroller is a class provided by flutter and we can assign such cont
     We could use golbally defined color, primary color and secondary color by theming. 
     set theme in main.dart file. 
     
+38. Flexible and Expanded
+    sometimes we would like to tell an item to take up more space in that row or column than it would normally take using widget Flexible.
+    fit property takes a FlexFit.loose:
+    loose means taht the child of that flexible item besically should keep its size and use that size in the surrounding row and column. 
+    tight fills the available remaining space.
+    Expanded: It is a widget simply flexible with flexfit.tight so there is no fit argument. 
