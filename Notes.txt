@@ -73,3 +73,12 @@ texteditingcontroller is a class provided by flutter and we can assign such cont
     loose means taht the child of that flexible item besically should keep its size and use that size in the surrounding row and column. 
     tight fills the available remaining space.
     Expanded: It is a widget simply flexible with flexfit.tight so there is no fit argument. 
+
+39. ListTile widgets
+    preconfigured and styled widget with a certain layout that fits particullary well into list. 
+
+43. Showing a DatePicker
+    Future is a class built into Dart, it allows us to create objects which will give us a value in the future. We could use future for the http request. 
+    Code execution in the app will not pause and wait for this to happen  the function we pass in the future generating widgets will be stored in memory and the other code will execute.
+
+44. 
