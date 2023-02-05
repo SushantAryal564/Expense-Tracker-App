@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Personal Expenses',
       theme: ThemeData(
           primarySwatch: Colors.blue,
+          errorColor: Colors.red,
           fontFamily: 'QuickSand',
           appBarTheme: AppBarTheme(
               titleTextStyle: TextStyle(
@@ -32,32 +33,7 @@ class _MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<_MyHomePage> {
-  final List<Transaction> _UserTransaction = [
-    // Transaction(
-    //   id: 't1',
-    //   title: 'New Shoes',
-    //   amount: 69.99,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't2',
-    //   title: 'Weekly Groceries',
-    //   amount: 16.63,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't2',
-    //   title: 'Weekly Groceries',
-    //   amount: 16.63,
-    //   date: DateTime.now(),
-    // ),
-    // Transaction(
-    //   id: 't2',
-    //   title: 'Weekly Groceries',
-    //   amount: 16.63,
-    //   date: DateTime.now(),
-    // ),
-  ];
+  final List<Transaction> _UserTransaction = [];
 
   List<Transaction> get _recentTrandaction {
     return _UserTransaction.where((tx) {
@@ -65,14 +41,21 @@ class _MyHomePageState extends State<_MyHomePage> {
     }).toList();
   }
 
-  void _addNewTransaction(String txtitle, double txamount) {
+  void _addNewTransaction(
+      String txtitle, double txamount, DateTime chosenDate) {
     final newTx = Transaction(
         title: txtitle,
         amount: txamount,
-        date: DateTime.now(),
+        date: chosenDate,
         id: DateTime.now().toString());
     setState(() {
       _UserTransaction.add(newTx);
+    });
+  }
+
+  void _deleteTransaction(String id) {
+    setState(() {
+      _UserTransaction.removeWhere((tx) => tx.id == id);
     });
   }
 
@@ -108,7 +91,7 @@ class _MyHomePageState extends State<_MyHomePage> {
         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Chart(_recentTrandaction),
-          TransactionList(_UserTransaction)
+          TransactionList(_UserTransaction, _deleteTransaction)
         ],
       )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
