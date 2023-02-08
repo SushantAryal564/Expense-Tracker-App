@@ -91,3 +91,12 @@ texteditingcontroller is a class provided by flutter and we can assign such cont
 45. Where we could imporve the app.
     
 46. Calculating sizes dynamically.
+47. Using the layoutbuilder widget
+    LayoutBuilder widget take one name argument builder argument. 
+    LayoutBuilder gives the information about the constraint that are applied to the widget we are in. 
+    Constraints are the important concept in the flutter it define how a widget are rendered on the screen and we set constraint by assigning a height or a width or otherwise if you don't set this all built in flutter widget have their own default constraints,like for example list view has a infinite amount of height.
+    Constraint always refers to height and width and are expressed as a minimum and maximum height and width we might have on a given widget and we can set them on our own or through default. 
+    Constraint are actually an object with some information about the constraint that are applied. 
+48. Controlling the device orientation
+    We could simply don't allow landscape mode. 
+    systemchrome alllow us to set some application wide setting for our app.
