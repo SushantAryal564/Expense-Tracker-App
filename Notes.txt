@@ -81,4 +81,13 @@ texteditingcontroller is a class provided by flutter and we can assign such cont
     Future is a class built into Dart, it allows us to create objects which will give us a value in the future. We could use future for the http request. 
     Code execution in the app will not pause and wait for this to happen  the function we pass in the future generating widgets will be stored in memory and the other code will execute.
 
-44. 
+44. What does responsiv and adaptive means?
+    Handling different sizes. 
+    adaptive means adapting to user interface on different operating system our app runs on.
+    Responsive and adaptive apps in flutter
+    We have only one widget tree because flutter is all about the widget tree we have one widget at the top and all the other widget nested inside of that widget by passing widget as argument of other widgets.
+    we can make our app responsive and adaptive by detecting which platform we are running on and which device size we have available in our code, in our widget tree and then we render certain sub-trees, certain individual widgets based on the platform or on the device. So, we have one widget tree but on certain point of that tree, we have an either/or decision where we render different styled widget or totally different widgets based on the size or on the platform.
+
+45. Where we could imporve the app.
+    
+46. Calculating sizes dynamically.

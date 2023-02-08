@@ -42,14 +42,15 @@ class _MyHomePageState extends State<_MyHomePage> {
   }
 
   void _addNewTransaction(
-      String txtitle, double txamount, DateTime chosenDate) {
-    final newTx = Transaction(
-        title: txtitle,
-        amount: txamount,
-        date: chosenDate,
+      String inputTitle, double inputAmount, DateTime choseDate) {
+    final newTranx = Transaction(
+        title: inputTitle,
+        amount: inputAmount,
+        date: choseDate,
         id: DateTime.now().toString());
+
     setState(() {
-      _UserTransaction.add(newTx);
+      _UserTransaction.add(newTranx);
     });
   }
 
@@ -73,25 +74,34 @@ class _MyHomePageState extends State<_MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Personal Expenses',
-          style: TextStyle(fontFamily: 'Open Sans'),
-        ),
-        actions: [
-          IconButton(
-              onPressed: () => _startAddNewTransaction(context),
-              icon: Icon(Icons.add))
-        ],
+    final appBar = AppBar(
+      title: Text(
+        'Personal Expenses',
+        style: TextStyle(fontFamily: 'Open Sans'),
       ),
+      actions: [
+        IconButton(
+            onPressed: () => _startAddNewTransaction(context),
+            icon: Icon(Icons.add))
+      ],
+    );
+    return Scaffold(
+      appBar: appBar,
       body: SingleChildScrollView(
           child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Chart(_recentTrandaction),
-          TransactionList(_UserTransaction, _deleteTransaction)
+          Container(
+              height: (MediaQuery.of(context).size.height -
+                      appBar.preferredSize.height) *
+                  0.4,
+              child: Chart(_recentTrandaction)),
+          Container(
+              height: (MediaQuery.of(context).size.height -
+                      appBar.preferredSize.height) *
+                  0.6,
+              child: TransactionList(_UserTransaction, _deleteTransaction))
         ],
       )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
